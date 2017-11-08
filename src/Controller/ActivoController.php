@@ -5,8 +5,8 @@
 	{
 
 		static function traduce($traducir){
-       
-        if ($traducir==true) {
+
+        if ($traducir==true || $traducir=='1') {
                 return "s";
         }
         return "n";
