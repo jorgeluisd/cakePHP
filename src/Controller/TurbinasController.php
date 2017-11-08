@@ -21,8 +21,7 @@
 	        $turbina = $this->Turbinas->newEntity();
 	        if ($this->request->is('post')) {
 	            $turbina = $this->Turbinas->patchEntity($turbina, $this->request->getData());
-
-	             $turbina->activo = ActivoController::traduce($turbina->activo);
+	             $turbina->activo = ActivoController::traduce($this->request->data['activo']);
 	            
 	            if ($this->Turbinas->save($turbina)) {
 	                $this->Flash->success(__('Turbina guardada con exito.'));
@@ -40,7 +39,11 @@
 		    $turbina->activo=($turbina->activo=='s')? true:false;
 		    
 		    if ($this->request->is(['post', 'put'])) {
+
+		    	$this->request->data['activo'] = ActivoController::traduce($this->request->data['activo']);
+
 		        $this->Turbinas->patchEntity($turbina, $this->request->getData());
+
 		        if ($this->Turbinas->save($turbina)) {
 		            $this->Flash->success(__('Tu turbina ha sido actualizada.'));
 		            return $this->redirect(['action' => 'index']);
