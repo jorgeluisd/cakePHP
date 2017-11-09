@@ -1,7 +1,7 @@
 <?php
-$class = 'message';
+$class = 'alert alert-';
 if (!empty($params['class'])) {
-    $class .= ' ' . $params['class'];
+    $class .= $params['class'];
 }
 if (!isset($params['escape']) || $params['escape'] !== false) {
     $message = h($message);
