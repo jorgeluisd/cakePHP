@@ -11,14 +11,14 @@
 		    		echo $this->Form->input('nombre',['required' => true, 'class' => 'form-control']);
 		    	?>
 		    </div>
-		    <div class="form-group"><div class="form-group">
+		    <div class="form-group">
 				<?php
 		    		echo $this->Form->input('color',['required' => true, 'class' => 'form-control']);
 		    	?>
 
 		    </div>
 
-		    <div class="form-group"><div class="form-group">
+		    <div class="form-group">
 		    	<?php
 		    		echo $this->Form->input('modelo',['required' => true, 'class' => 'form-control']);
 		    	?>
