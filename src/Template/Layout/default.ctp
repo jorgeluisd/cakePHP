@@ -78,10 +78,21 @@
     </nav>
 
     <?= $this->Flash->render() ?>
+
     <div class="container" style="background-color: #fff; padding-bottom: 20px;">
         <?= $this->fetch('content') ?>
     </div>
+
     <footer>
+      <div class="row justify-content-md-center" style="padding-top:20px;">
+        <div class="panel panel-default">
+          
+          <div class="panel-heading">
+              Desarrollado por Jorge Diaz - &copy; Todos los derechos reservados - 2017
+          </div>
+          
+        </div>
+      </div>
     </footer>
 
     
