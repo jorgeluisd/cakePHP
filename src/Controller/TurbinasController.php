@@ -66,4 +66,20 @@
 		}
 
 
+		public function on($id = null)
+		{
+		    $turbina = $this->Turbinas->get($id);
+		    
+		    $turbina->activo=($turbina->activo=='s')? 'n':'s';
+
+		        if ($this->Turbinas->save($turbina)) {
+		            $this->Flash->success(__('Tu turbina ha sido actualizada.'));
+		            return $this->redirect(['action' => 'index']);
+		        }
+		        $this->Flash->error(__('Tu turbina no se ha podido actualizar.'));
+		}
+
+
+
+
 	}
