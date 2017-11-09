@@ -14,6 +14,9 @@
      <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.4.2/css/buttons.dataTables.min.css">
      <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
      <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.0/css/responsive.bootstrap4.min.css">
+
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
      
 
 
@@ -27,7 +30,7 @@
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
-<body>
+<body style="background-color: #f8f8f8">
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
         <?= $this->Html->link(
             'Turbinas',
@@ -75,7 +78,7 @@
     </nav>
 
     <?= $this->Flash->render() ?>
-    <div class="container">
+    <div class="container" style="background-color: #fff; padding-bottom: 20px;">
         <?= $this->fetch('content') ?>
     </div>
     <footer>
